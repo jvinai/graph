@@ -37,11 +37,13 @@ app.get('/api/get', function (req, res) {
 
   res.send(originalValues);
 });
-
-var server = app.listen(5000);
+app.set('port', (process.env.PORT || 5000));
+app.listen(app.get('port'), function() {
+  console.log('Node app is running on port', app.get('port'));
+});
 var io = require('socket.io')(server);
 
-console.log('Server start on port 3000');
+console.log('Server start on port 5000');
 
 var emitWS = function () {
   io.sockets.emit('getData', {
