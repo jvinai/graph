@@ -38,7 +38,7 @@ app.get('/api/get', function (req, res) {
   res.send(originalValues);
 });
 
-var server = app.listen(3000);
+var server = app.listen(5000);
 var io = require('socket.io')(server);
 
 console.log('Server start on port 3000');
