@@ -44,7 +44,6 @@ var io = require('socket.io')(server);
 console.log('Server start on port 3000');
 
 var emitWS = function () {
-  console.log('ding');
   io.sockets.emit('getData', {
     date: moment().unix() * 1000,
     meteors: Math.floor((Math.random() * 10)),
