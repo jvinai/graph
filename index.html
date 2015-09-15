@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+  <script src="./bower_components/angular/angular.js"></script>
+  <script src="./bower_components/angular-socket-io/socket.min.js"></script>
+  <script src="./bower_components/highcharts/adapters/standalone-framework.js"></script>
+  <script src="./bower_components/highcharts/highcharts.js"></script>
+  <script src="./bower_components/highcharts-ng/dist/highcharts-ng.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="./front/app.js"></script>
+  <script src="./front/services/graphService.js"></script>
+  <script src="./front/services/ioService.js"></script>
+  <script src="./front/controllers/graphCtrl.js"></script>
+  <title></title>
+</head>
+<body ng-app="graph" ng-controller="graphCtrl as c">
+
+<div class="container">
+  <div class="jumbotron">
+    <h1>A chart</h1>
+
+    <p>Showing how ricochets and rabbit jumps can attract meteors.</p>
+  </div>
+</div>
+
+
+<div class="container">
+  <highchart config="chartConfig"></highchart>
+</div>
+
+
+</body>
+</html>
