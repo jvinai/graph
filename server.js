@@ -38,7 +38,7 @@ app.get('/api/get', function (req, res) {
   res.send(originalValues);
 });
 app.set('port', (process.env.PORT || 5000));
-app.listen(app.get('port'), function() {
+var server = app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
 var io = require('socket.io')(server);
